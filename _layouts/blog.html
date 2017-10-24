@@ -1,0 +1,106 @@
+---
+layout: compress
+---
+
+{% include headPost.html %}
+
+
+
+
+<article class="main-content post-page post_blog" itemscope itemtype="http://schema.org/Article">
+    {% include breadcrumb.html %}
+
+    <h1 itemprop="name headline" class="post_blog_title">{{ page.title }}</h1>
+    <div class="post-data">
+        <time datetime="{{ page.date | date: '%F %H:%M:%S'}}" itemprop="datePublished">تاریخ：    <time id="postedon" datetime="{{ page.date | date_to_xmlschema }}">
+            <script>document.write(get_year_month_day("{{ page.date | date: '%Y-%m-%d' }}"));</script>
+            <span id="postedago"></span>
+        </time></time>
+        <a href="/tags#{{ page.category }}" title="{{ page.category }}" data-hover="دسته بندی : {{ page.category }}">دسته بندی : {{ page.category }}</a>
+    </div>
+    <h3 class="display_none">
+        {% unless page.tags == empty %}
+        {% assign tags_list = page.tags %}
+        {% if tags_list.first[0] == null %}
+        {% for tag in tags_list %}
+        <a href="/tags#{{ tag }}" rel="tag" title="{{ tag }}" data-hover="{{ tag }}">
+            {{ tag }} <span>({{ site.tags[tag].size }})</span>
+            {% unless forloop.last %}{% endunless %}
+        </a>
+        {% endfor %}
+        {% else %}
+        {% for tag in tags_list %}
+        <a href="/tags#{{ tag[0] }}" title="{{ tag[0] }}" rel="tag" data-hover="{{tag[0]}}">
+            {{ tag[0] }} <span>({{ tag[1].size }})</span>
+            {% unless forloop.last %}{% endunless %}
+        </a>
+        {% endfor %}
+        {% endif %}
+        {% assign tags_list = nil %}
+        {% endunless %}
+    </h3>
+    <div id="post-content" class="post-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+</article>
+
+<!-- <div class="related-post-lists">
+	<div class="post-lists">
+		<div class="post-lists-body">
+					<div class="post-list-item">
+				<div class="post-list-item-container">
+					<div class="item-label">
+						<div class="item-title"><a href="induction.html">title</a></div>
+						<div class="item-meta clearfix">
+														<div class="item-meta-ico bg-ico-image" style="background: url('../usr/themes/pinghsu/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
+	                        							<div class="item-meta-cat"><a href="../category/thoughts/index.html">Thoughts</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+				</div>
+	</div>
+</div> -->
+
+{% include foot.html %}
+
+<script>
+    var datetime = new Date();
+    var date = datetime.getFullYear() + "/" + datetime.getMonth() + "/" + datetime.getDay();
+
+    function ago(date) {
+        function render(n, unit) {
+            return n + " " + unit + ((n == 1) ? "" : "") + " پیش";
+        }
+
+        var seconds = Math.floor((new Date - date) / 1000);
+
+        var interval = Math.floor(seconds / (60 * 60 * 24 * 30 * 365));
+        if (Math.floor(seconds / (60 * 60 * 24 * 30 * 365)) >= 1) {
+            return render(interval, "سال");
+        }
+        interval = Math.floor(seconds / (60 * 60 * 24 * 30));
+        if (interval >= 1) {
+            return render(interval, "ماه");
+        }
+        interval = Math.floor(seconds / (60 * 60 * 24));
+        if (interval >= 1) {
+            return render(interval, "روز");
+        }
+        interval = Math.floor(seconds / (60 * 60));
+        if (interval >= 1) {
+            return render(interval, "ساعت");
+        }
+        interval = Math.floor(seconds / 60);
+        if (interval >= 1) {
+            return render(interval, "دقیقه");
+        }
+        interval = Math.floor(seconds);
+        return render(interval, "ثانیه");
+    }
+
+
+    var date = Date.parse(document.getElementById("postedon").getAttribute("datetime"));
+    document.getElementById("postedago").innerHTML = ago(date)+"    ";
+</script>
+
