@@ -36,7 +36,7 @@ tags:
 
 ![قالب انیمه لیست][1]
 
-[1]: /images/project/AnimeList/AnimeList-header.jpg "قالب انیمه لیست"
+[1]: /Images/project/AnimeList/AnimeList-header.jpg "قالب انیمه لیست"
 
 
 ## توضیعاتی در مورد انیمه لیست 

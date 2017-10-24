@@ -36,7 +36,7 @@ tags:
 
 ![قالب انیمه مو][1]
 
-[1]: /images/project/AnimeMo/HeaderMain.jpg "قالب انیمه مو"
+[1]: /Images/project/AnimeMo/HeaderMain.jpg "قالب انیمه مو"
 
 
 ## توضیعاتی در مورد انیمه مو 

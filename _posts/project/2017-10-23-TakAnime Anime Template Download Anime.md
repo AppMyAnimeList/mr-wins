@@ -36,7 +36,7 @@ tags:
 
 ![قالب تک انیمه][1]
 
-[1]: /images/project/takanime/headerTakanime.jpg "قالب تک انیمه"
+[1]: /Images/project/takanime/headerTakanime.jpg "قالب تک انیمه"
 
 
 ## توضیعاتی در مورد تک انیمه 
