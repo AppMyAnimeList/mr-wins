@@ -1,0 +1,111 @@
+---
+---
+{% assign p_Url=page.url | replace: '/', '' %}
+
+<div class="post-header-thumb main_header bg-white}">
+
+    <div class="post-header-thumb">
+
+        <div class="siema" >
+
+
+
+            <div class="post-header-thumb-container">
+                <h1 class="post-title" itemprop="name headline">سفارش طراحی</h1>
+                <h2 class="post-data">همیشه طراحی یک سایت خوب می تواند به شما کمک کند تا بالاترین راندمان را از طریق اینترنتی داشته باشید که امروز همه را درگیر خودش کرده است .
+ طراحی بر مبنای سئو و ورودی گوگل بالا از کارهای ماست که نمونه کار های ما این موضوع را نشان میدهند .</h2>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="backgrounds">
+        <div class="slice s0"></div>
+        <div class="slice s1"></div>
+        <div class="slice s2"></div>
+        <div class="slice s3"></div>
+        <div class="slice s4"></div>
+        <div class="slice s5"></div>
+        <div class="slice s6"></div>
+    </div>
+</div>
+
+
+
+
+
+<div class="main-content index-page clearfix ">
+
+    <div class="bodyDd">
+    <div class="Designing">
+       <h2>سفارش طراحی :</h2>
+       <form  method="POST">
+           <input type="hidden" id="subject" name="_subject" value="سفارش طراحی" />
+<div><span>نام : </span>
+           <input required id="name" type="text" name="name">
+</div>
+           <div><span>ایمیل یا ایدی تلگرام (جهت ارتباط) : </span>
+           <input required id="email" type="text" name="_replyto">
+           </div>
+           <div><span>قیمت نسبت به خواسته های شما : </span>
+           <input type="text" required id="Price" name="Price"></input>
+       </div>
+           <div><span>امکانات و نیازهای شما از سایت : </span>
+               <textarea required id="Amkanat" name="Amkanat"></textarea>
+           </div>
+
+           <div><span>توضیحات لازم از سایت : </span>
+               <textarea  required id="Dic" name="Dic"></textarea>
+           </div>
+           <input type="submit" value="ارسال سفارش">
+       </form>
+       <script>
+           $("form").submit(function (event) {
+               event.preventDefault();
+               $.ajax({
+                   url: "https://formspree.io/karimqaderi1@gmail.com",
+                   method: "POST",
+                   data: {
+                       _subject: $("#subject").val()+" "+$("#email").val(),
+                       name: $("#name").val(),
+                       email: $("#email").val(),
+                       Price: $("#Price").val(),
+                       Amkanat: $("#Amkanat").val(),
+                       Dic: $("#Dic").val(),
+               },
+               dataType: "json"
+           }).done(function () {
+                   $("#name").val("");
+                   $("#email").val("");
+                   $("#Dic").val("");
+                   $("#Amkanat").val("");
+                   $("#Price").val("");
+                   alert("سفارش شما ارسال شد");
+               }).fail(function () {
+                   alert("در ارسال سفارش مشکلی پیش امد.");
+
+               })
+           });
+
+       </script>
+   </div>
+
+
+
+<div class="dicDis">
+    <span>    خلاصه مراحل سفارش طراحی سایت :</span>
+    <span>    ۱. تجزیه و تحلیل – تهیه لیستی از امکانات و نیازهای شما از سایت</span>
+    <span>    ۲. ارسال توضیحات لازم از سایت برای استعلام قیمت</span>
+    <span>    ۳. ارسال قیمت نسبت به خواسته های شما و توافق بین دوطرف</span>
+    <span>    ۴. واریز ۲۵% درصد از هزینه و استارت طراحی</span>
+    <span>    ۵. ارسال طرح آماده شده بعد از مدت معین برای شما و دریافت تایید</span>
+    <span>    ۶. دریافت ۲۵% درصد دوم و استارت کدنویسی</span>
+    <span>    ۷. نمایش سایت به شما و دریافت مابقی هزینه</span>
+    <span>    ۸. نصب ، راه اندازی و پشتیبانی</span>
+    <span>    ” از اینجاست که شما یکی از مشتریان ثابت آقای برند می شوید “</span>
+</div>
+</div>
+</div>

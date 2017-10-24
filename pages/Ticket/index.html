@@ -1,0 +1,91 @@
+---
+---
+
+<div class="post-header-thumb main_header bg-white}">
+
+    <div class="post-header-thumb">
+
+        <div class="siema" >
+
+
+
+            <div class="post-header-thumb-container">
+                <h1 class="post-title" itemprop="name headline">پشتیبانی سایت </h1>
+                <h2 class="post-data"> روزانه وب سایت های زیادی طراحی و ساخته می شوند ، با توجه به هدفی که این وب سایت ها دارند در زمینه های فعالیتی مختلفی حضور داشته و از کسب و کار های کوچک و بزرگ گرفته تا اشخاص ، وب سایت های اختصاصی خود را دارند. ولی به دلیل وجود برخی از مشکلات ، وب سات ها پس طراحی و ساخت ، بروز رسانی نشده و راکد می مانند ، </h2>
+
+
+
+        </div>
+    </div>
+
+    <div class="backgrounds">
+        <div class="slice s0"></div>
+        <div class="slice s1"></div>
+        <div class="slice s2"></div>
+        <div class="slice s3"></div>
+        <div class="slice s4"></div>
+        <div class="slice s5"></div>
+        <div class="slice s6"></div>
+    </div>
+</div>
+
+</div>
+
+
+
+<div class="main-content index-page clearfix tick">
+
+    <div class="bodyDd">
+        <div class="Designing">
+            <h2>ارسال درخواست پشتیبانی :</h2>
+            <form  method="POST">
+                <input type="hidden" id="subject" name="_subject" value="درخواست پشتیبانی" />
+                <div><span>نام : </span>
+                    <input required id="name" type="text" name="name">
+                </div>
+                <div><span>ادرس سایت : </span>
+                    <input required id="UrlSite" type="text" name="UrlSite">
+                </div>
+                <div><span>ایمیل یا ایدی تلگرام (جهت ارتباط) : </span>
+                    <input required id="email" type="text" name="email">
+                </div>
+
+
+                <div><span>توضیحات : </span>
+                    <textarea required id="Dic" name="Dic"></textarea>
+                </div>
+                <input type="submit" value="ارسال درخواست پشتیبانی">
+            </form>
+            <script>
+                $("form").submit(function (event) {
+                    event.preventDefault();
+                    $.ajax({
+                        url: "https://formspree.io/karimqaderi1@gmail.com",
+                        method: "POST",
+                        data: {
+                            _subject: $("#subject").val()+" "+$("#email").val(),
+                            name: $("#name").val(),
+                            email: $("#email").val(),
+                            Dic: $("#Dic").val(),
+                            UrlSite: $("#UrlSite").val(),
+                        },
+                        dataType: "json"
+                    }).done(function () {
+                        $("#name").val("");
+                        $("#email").val("");
+                        $("#Dic").val("");
+                        $("#UrlSite").val("");
+                        alert("درخواست پشتیبانی شما ارسال شد");
+                    }).fail(function () {
+                        alert("در ارسال درخواست پشتیبانی شما مشکلی پیش امد.");
+
+                    })
+                });
+
+            </script>
+        </div>
+
+
+
+    </div>
+</div>
