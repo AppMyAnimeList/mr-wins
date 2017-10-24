@@ -1,0 +1,85 @@
+---
+layout: compress
+---
+
+{% include headPost.html %}
+
+
+
+<article class="main-content post-page page_posts post_blog" itemscope itemtype="http://schema.org/Article">
+
+    {% include breadcrumb.html %}
+
+    <h1 itemprop="name headline" class="post_blog_title">{{ page.title }}</h1>
+    <div class="post-data">
+        <time datetime="{{ page.date | date: '%F %H:%M:%S'}}" itemprop="datePublished">تاریخ：    <time id="postedon" datetime="{{ page.date | date_to_xmlschema }}">
+            <script>document.write(get_year_month_day("{{ page.date | date: '%Y-%m-%d' }}"));</script>
+            <span id="postedago"></span>
+        </time></time>
+        <a href="/tags#{{ page.category }}" title="{{ page.category }}" data-hover="دسته بندی : {{ page.category }}">دسته بندی : {{ page.category }}</a>
+    </div>
+    <h3 class="display_none">
+        {% unless page.tags == empty %}
+        {% assign tags_list = page.tags %}
+        {% if tags_list.first[0] == null %}
+        {% for tag in tags_list %}
+        <a href="/tags#{{ tag }}" rel="tag" title="{{ tag }}" data-hover="{{ tag }}">
+            {{ tag }} <span>({{ site.tags[tag].size }})</span>
+            {% unless forloop.last %}{% endunless %}
+        </a>
+        {% endfor %}
+        {% else %}
+        {% for tag in tags_list %}
+        <a href="/tags#{{ tag[0] }}" title="{{ tag[0] }}" rel="tag" data-hover="{{tag[0]}}">
+            {{ tag[0] }} <span>({{ tag[1].size }})</span>
+            {% unless forloop.last %}{% endunless %}
+        </a>
+        {% endfor %}
+        {% endif %}
+        {% assign tags_list = nil %}
+        {% endunless %}
+    </h3>
+    <div id="post-content" class="post-content" itemprop="articleBody">
+        <div class="link_site">
+            <a href="{{page.link_Web_site}}" rel="nofollow" class="link_Web_site">مشاهدی وب سایت</a>
+            <a href="{{page.link_img_thame_main}}" class="link_Web_Seo">عکس صفحه اصلی</a>
+            <a href="{{page.link_img_thame_content}}" class="link_Web_Seo">عکس ادامه مطالب</a>
+            {% if page.link_img_thame_404!="/" %}
+            <a href="{{page.link_img_thame_404}}" class="link_Web_Seo">عکس صفحه 404</a>
+            {% endif %}
+            {% if page.link_img_thame_page!="/"  %}
+            <a href="{{page.link_img_thame_page}}" class="link_Web_Seo">عکس صفحه</a>
+            {% endif %}
+            {% if page.link_img_thame_page_category!="/" %}
+            <a href="{{page.link_img_thame_page_category}}" class="link_Web_Seo">عکس صفحه دسته ها</a>
+            {% endif %}
+
+
+        </div>
+
+        {{ content }}
+    </div>
+</article>
+
+
+<!-- <div class="related-post-lists">
+	<div class="post-lists">
+		<div class="post-lists-body">
+					<div class="post-list-item">
+				<div class="post-list-item-container">
+					<div class="item-label">
+						<div class="item-title"><a href="induction.html">title</a></div>
+						<div class="item-meta clearfix">
+														<div class="item-meta-ico bg-ico-image" style="background: url('../usr/themes/pinghsu/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
+	                        							<div class="item-meta-cat"><a href="../category/thoughts/index.html">Thoughts</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+				</div>
+	</div>
+</div> -->
+
+{% include foot.html %}
+
+
