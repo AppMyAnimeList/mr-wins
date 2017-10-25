@@ -15,7 +15,12 @@
                                     <a href="/tags#{{ posts.category }}" title="{{ posts.category }}" data-hover="{{ posts.category }}">{{ posts.category }}</a>
                                     <a href="/archives#{{ posts.date | date: '%Y'}}" title="{{ posts.date | date: '%Y'}}" data-hover="{{ posts.date | date: '%F %H:%M'}}"  >{{ posts.date | date: "%F %H:%M"}}</a></div>
                                      
-                                               <span itemprop="publisher">
+                                               <div itemtype="https://schema.org/Organization" itemscope="itemscope" itemprop="publisher">
+<link itemprop="url" href="{{site.url}}"> 
+<span itemprop="name">{{ page.title }}</span>
+<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="{{ site.url }}/assets/images/logo.png">
+</div>
                                                 
                                                   <span itemprop="name">آقای برنده</span> 
                                                 
