@@ -56,6 +56,18 @@ layout: compress
         <a href="/tags#{{ page.category }}" title="{{ page.category }}" data-hover="دسته بندی : {{ page.category }}">دسته بندی : {{ page.category }}</a>
     </div>
     <h3 class="display_none">
+	    
+	    	    <div itemtype="https://schema.org/Organization" itemscope="itemscope" itemprop="publisher">
+<link itemprop="url" href="{{site.url}}"> 
+<span itemprop="name">{{ site.title }}</span>
+<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="{{ site.url }}/assets/images/logo.png">
+</div>
+		    
+		    
+	     <span itemprop="image">{{site.url}}{{page.background-image}}</span>
+	    <span itemprop="author">آقای برنده</span>
+			    
         {% unless page.tags == empty %}
         {% assign tags_list = page.tags %}
         {% if tags_list.first[0] == null %}
