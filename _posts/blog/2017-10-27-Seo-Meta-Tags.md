@@ -2,7 +2,7 @@
 layout: blog
 title: "انواع متا تگ ها (SEO Meta Tags) کاربرد متاتگ ها در سئو"
 background-image: /Images/blog/Seo-Meta-Tags.jpg
-date:  2017-9-28 23:45:56
+date:  2017-10-27 23:45:56
 category: blog
 breadcrumb: مطالب اموزشی
 tags:
