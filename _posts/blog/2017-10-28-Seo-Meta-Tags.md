@@ -8,17 +8,17 @@ breadcrumb: مطالب اموزشی
 tags:
 - آقای برنده
 - متاتگ چیست؟
+- انواع متا تگ ها
+- انواع متا تگ ها (SEO Meta Tags)
+- متاتگ ها - Meta Tags
+- متا تگ نوع محتوا
+- متا تگ توضیحات (Description)
 - آشنایی با انواع متا تگ ها (Meta Tags)
 - متا تگ های کم اثر برای سئو
 - ربات ها Robots
 - کلمات کلیدی Keywords
 - کاربرد متاتگ ها در سئو
 - SEO Meta Tags
-- انواع متا تگ ها
-- انواع متا تگ ها (SEO Meta Tags)
-- متاتگ ها - Meta Tags
-- متا تگ نوع محتوا
-- متا تگ توضیحات (Description)
 - عنوان (Title)
 - متا تگ نوع محتوا (Meta content type)
 - متاتگ ویوپورت (Viewport)
