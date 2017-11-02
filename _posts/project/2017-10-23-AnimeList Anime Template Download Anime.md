@@ -1,7 +1,7 @@
 ---
 layout: project
 background: blue
-link_Web_site: http://AnimeList.ir
+link_Web_site: https://www.google.com/search?q=%D8%B3%D8%A7%DB%8C%D8%AA+animelist
 link_img_thame_main: /Images/project/AnimeList/AnimeList-main.jpg
 link_img_thame_content: /Images/project/AnimeList/AnimeList-content.jpg
 link_img_thame_404: /Images/project/AnimeList/AnimeList-404.jpg
